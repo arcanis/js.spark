@@ -23,7 +23,7 @@ require( [ 'three', 'stats', 'sparks/zones/batman', 'sparks/zones/cuboid', 'spar
 		count : batmanVerticeCount, initial : batmanVerticeCount,
 		position : new BatmanZone( 10 ),
 		lifeTime : [ 0, 20 ],
-		frequency : .001
+		frequency : .004
 	} );
 	
 	var starsVerticeCount = 10000;
@@ -34,7 +34,7 @@ require( [ 'three', 'stats', 'sparks/zones/batman', 'sparks/zones/cuboid', 'spar
 		position : new CuboidZone( 1000, 200, 20 ),
 		velocity : new LineZone( 0, 0, 50 ),
 		lifeTime : [ 1.5, 4 ],
-		frequency : .0001
+		frequency : .0006
 	} );
 	
 	var scene = new Three.Scene( );
