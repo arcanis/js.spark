@@ -1,4 +1,4 @@
-require( [ 'three', 'stats', 'sparks/zones/batman', 'sparks/zones/cuboid', 'sparks/zones/point', 'sparks/extra/three/object3d', 'sparks/extra/three/shader', './batmanstyle', 'starsstyle', 'domReady!' ], function ( Three, Stats, BatmanZone, CuboidZone, PointZone, SparksHelper, SparksShader, BatmanStyle, StarsStyle ) {
+require( [ 'three', 'stats', 'sparks/zones/batman', 'sparks/zones/cuboid', 'sparks/zones/line', 'sparks/extra/three/object3d', 'sparks/extra/three/shader', './batmanstyle', 'starsstyle', 'domReady!' ], function ( Three, Stats, BatmanZone, CuboidZone, LineZone, SparksHelper, SparksShader, BatmanStyle, StarsStyle ) {
 	
 	var stats = new Stats( );
 	stats.getDomElement( ).style.position = 'absolute';
@@ -32,7 +32,7 @@ require( [ 'three', 'stats', 'sparks/zones/batman', 'sparks/zones/cuboid', 'spar
 		initializers : [ new StarsStyle( starsMaterial ) ],
 		count : starsVerticeCount,
 		position : new CuboidZone( 1000, 200, 20 ),
-		velocity : new PointZone( 0, 0, 50 ),
+		velocity : new LineZone( 0, 0, 50 ),
 		lifeTime : [ 1.5, 4 ],
 		frequency : .0001
 	} );
