@@ -52,8 +52,8 @@ require( {
 		// Stats.js
 		stats : 'vendor/stats/amd',
 		
-		// Sparks2.js library path
-		sparks : '../lib',
+		// Spark.js library path
+		spark : '../lib',
 		
 		// Require.js plugins
 		order : 'vendor/require/order',

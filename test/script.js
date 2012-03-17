@@ -1,4 +1,4 @@
-require( [ 'three', 'stats', 'sparks/zones/batman', 'sparks/zones/cuboid', 'sparks/zones/line', 'sparks/extra/three/object3d', 'sparks/extra/three/shader', './batmanstyle', 'starsstyle', 'domReady!' ], function ( Three, Stats, BatmanZone, CuboidZone, LineZone, SparksHelper, SparksShader, BatmanStyle, StarsStyle ) {
+require( [ 'three', 'stats', 'spark/zones/batman', 'spark/zones/cuboid', 'spark/zones/line', 'spark/extra/three/helper', 'spark/extra/three/material', './batmanstyle', './starsstyle', 'domReady!' ], function ( Three, Stats, BatmanZone, CuboidZone, LineZone, SparkHelper, SparkMaterial, BatmanStyle, StarsStyle ) {
 	
 	var stats = new Stats( );
 	stats.getDomElement( ).style.position = 'absolute';
@@ -17,8 +17,8 @@ require( [ 'three', 'stats', 'sparks/zones/batman', 'sparks/zones/cuboid', 'spar
 	camera.position.z = 100;
 	
 	var batmanVerticeCount = 5000;
-	var batmanMaterial = new SparksShader( batmanVerticeCount );
-	var batmanSparks = new SparksHelper( batmanMaterial, {
+	var batmanMaterial = new SparkMaterial( batmanVerticeCount );
+	var batmanSparks = new SparkHelper( batmanMaterial, {
 		initializers : [ new BatmanStyle( batmanMaterial ) ],
 		count : batmanVerticeCount, initial : batmanVerticeCount,
 		position : new BatmanZone( 10 ),
@@ -27,8 +27,8 @@ require( [ 'three', 'stats', 'sparks/zones/batman', 'sparks/zones/cuboid', 'spar
 	} );
 	
 	var starsVerticeCount = 10000;
-	var starsMaterial = new SparksShader( starsVerticeCount );
-	var starsSparks = new SparksHelper( starsMaterial, {
+	var starsMaterial = new SparkMaterial( starsVerticeCount );
+	var starsSparks = new SparkHelper( starsMaterial, {
 		initializers : [ new StarsStyle( starsMaterial ) ],
 		count : starsVerticeCount,
 		position : new CuboidZone( 1000, 200, 20 ),

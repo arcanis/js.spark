@@ -26,7 +26,7 @@ define( function ( ) {
 		this.material.colors[ spark.lambda ].setHSV( 0.17, this.s, 0.96 );
 		this.material.attributes.aColor.needsUpdate = true;
 		
-		this.material.sizes[ spark.lambda ] = 15;
+		this.material.sizes[ spark.lambda ] = 30;
 		this.material.attributes.aSize.needsUpdate = true;
 		
 	};
